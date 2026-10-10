@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lab.html">Lab</a>
+    <a href="quiz.html" class="active">Quiz</a>
+    <a href="exam.html">Exam</a>
+  </nav>
+
+  <div>
+    <h1>Quiz Results</h1>
+  </div>
+
+  <div class="card">
+    <h2>Quizzes</h2>
+
+    <!-- Quiz Entry Example (Multiple Images) -->
+    <div class="result-box">
+      <h3>Quiz 1</h3>
+      <div class="image-gallery">
+       <img src="quiz1.jfif" alt="Midterm Screenshot 1" onclick="openModal(this)">
+       <img src="quiz1.2.jfif" alt="Midterm Screenshot 1" onclick="openModal(this)">
+      </div>
+      <p class="score">Score: <strong>19/20</strong></p>
+    </div>
+
+    <!-- Quiz Entry Example (Single Image) -->
+    <div class="result-box">
+      <h3>Quiz 2</h3>
+      <div class="image-gallery">
+        <img src="quiz2.jpg" alt="Quiz 2 Screenshot">
+      </div>
+      <p class="score">Score: <strong></strong></p>
+    </div>
+
+  </div>
+
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="fullImg">
+  </div>
+
+  <script>
+    function openModal(imgElement) {
+      var modal = document.getElementById("imageModal");
+      var fullImg = document.getElementById("fullImg");
+      modal.style.display = "block";
+      fullImg.src = imgElement.src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+
+</body>
+</html>
